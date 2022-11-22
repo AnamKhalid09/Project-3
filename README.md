@@ -23,22 +23,36 @@ We decided to conduct our own analysis and to test some of the measurable factor
 
 4. Inside the folder you just created, put your csv files named as country_profile_variables.csv and olympics_medals_country_wise.csv. These will be the two datasets that you'll be using for your project. We got these datasets from [Kaggle](https://www.kaggle.com/).
 
-5. Firstly, for the ETL process, create two files namely queries.sql and data_etl.ipynb. These are the files where you'll write your main code for ETL, we'll discuss it further later on.
+5. For webscraping, create a file webscrape.ipynb and write your code in there.
 
-6. Add a .gitignore file as a good practice in case you want to keep any confidential files in it like your API keys, your password or username. .gitignore file will keep all the files hidden from being published publicly even if your repository is public. For username and password, open your .gitignore file and in the first line type the following:
+6. For the ETL process, create two files namely queries.sql and data_etl.ipynb. These are the files where you'll write your main code for ETL, we'll discuss it further later on.
+
+7. Add a .gitignore file as a good practice in case you want to keep any confidential files in it like your API keys, your password or username. .gitignore file will keep all the files hidden from being published publicly even if your repository is public. For username and password, open your .gitignore file and in the first line type the following:
 
 ```python
 # Adding config.py file.
 config.py
 ```
 
-7. Add a README.md file to share your approach towards project.
+8. Add a README.md file to share your approach towards project.
 
-8. Push the above changes to GitHub.
+9. Push the above changes to GitHub.
 
 ## Project Proposal
 
 The project proposal is attached in repo in the pdf form, please refer to the pdf file with name 'Project Proposal' for understanding of the project in detail.
+
+## Webscraping
+
+Follow the steps below to get the scraped data
+
+- Import pandas, requests, BeautifulSoup and os libraries
+- Get the response in the form of html
+- Parse data from the html into a beautifulsoup object
+- Convert into a dataframe
+- Create a copy of the dataframe, to save yourself from troubles later on, and rename the columns.
+- Clean the data
+- Save the data in the form of csv files into Resources folder so that later on you can use this data for the ETL pipeline.
 
 ## Extracting, Transforming and Loading process (ETL)
 
