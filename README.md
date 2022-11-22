@@ -14,14 +14,14 @@ We decided to conduct our own analysis and to test some of the measurable factor
 
 ### Before You Begin
 
-1. Create a new repository for this project and name it as **project-3**. 
-   **Do not add this to an existing repository**.
+1: Clone this repository using git clone 
 
-2. Clone the new repository to your computer and as it's a group project, copy the url and send it to the contributors so that they can also clone on their computers. Don't forget to add them as contributors first by going into the project settings. We created branches so that the contributors can contribute in their own branch and later we can just push the final product to the main.
+```
+git clone 
 
-3. Inside your local Git repository, create a directory. Use a folder name such as: **Resources**.
+```
 
-4. Inside the folder you just created, put your csv files named as country_profile_variables.csv and olympics_medals_country_wise.csv. These will be the two datasets that you'll be using for your project. We got these datasets from [Kaggle](https://www.kaggle.com/).
+3. Inside the folder you just created, put your csv files named as country_profile_variables.csv and olympics_medals_country_wise.csv. These will be the two datasets that you'll be using for your project. We got these datasets from [Kaggle](https://www.kaggle.com/).
 
 5. For webscraping, create a file webscrape.ipynb and write your code in there.
 
@@ -34,11 +34,7 @@ We decided to conduct our own analysis and to test some of the measurable factor
 config.py
 ```
 
-8. Add a README.md file to share your approach towards project.
-
-9. Push the above changes to GitHub.
-
-10. Install the following libraries in your local using terminal/Gitbash. You'll use these libraries later in your code for the data analysis purpose.
+8. Install the following libraries in your local using terminal/Gitbash. You'll use these libraries later in your code for the data analysis purpose.
 
 - Pandas
 - requests
@@ -46,6 +42,7 @@ config.py
 - os
 - sqlalchemy
 - config
+- Flask (pip install flask)
 
 ## Project Proposal
 
