@@ -38,6 +38,15 @@ config.py
 
 9. Push the above changes to GitHub.
 
+10. Install the following libraries in your local using terminal/Gitbash. You'll use these libraries later in your code for the data analysis purpose.
+
+- Pandas
+- requests
+- BeautifulSoup
+- os
+- sqlalchemy
+- config
+
 ## Project Proposal
 
 The project proposal is attached in repo in the pdf form, please refer to the pdf file with name 'Project Proposal' for understanding of the project in detail.
