@@ -17,15 +17,9 @@ We decided to conduct our own analysis and to test some of the measurable factor
 1: Clone this repository using git clone 
 
 ```
-git clone 
+git clone https://github.com/AnamKhalid09/Project-3.git
 
 ```
-
-3. Inside the folder you just created, put your csv files named as country_profile_variables.csv and olympics_medals_country_wise.csv. These will be the two datasets that you'll be using for your project. We got these datasets from [Kaggle](https://www.kaggle.com/).
-
-5. For webscraping, create a file webscrape.ipynb and write your code in there.
-
-6. For the ETL process, create two files namely queries.sql and data_etl.ipynb. These are the files where you'll write your main code for ETL, we'll discuss it further later on.
 
 7. Add a .gitignore file as a good practice in case you want to keep any confidential files in it like your API keys, your password or username. .gitignore file will keep all the files hidden from being published publicly even if your repository is public. For username and password, open your .gitignore file and in the first line type the following:
 
@@ -34,7 +28,7 @@ git clone
 config.py
 ```
 
-8. Install the following libraries in your local using terminal/Gitbash. You'll use these libraries later in your code for the data analysis purpose.
+2. Install the following libraries in your local using terminal/Gitbash. You'll use these libraries later in your code for the data analysis purpose.
 
 - Pandas
 - requests
@@ -43,6 +37,8 @@ config.py
 - sqlalchemy
 - config
 - Flask (pip install flask)
+
+**Note:** The installation instructions are for windows users only. If you're using Mac, please do your research for installation on Mac.
 
 ## Project Proposal
 
