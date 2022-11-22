@@ -6,9 +6,7 @@
 
 ## Background
 
-_"According to an IBM report, data science jobs will show a growth of 30%. As per the US Bureau of Labor Statistics, about 11 million jobs would be created by the year 2026. The US Bureau of Labor Statistics further predicts a stupendous growth in the data science field between now and 2029, with professionals being paid quite well. According to a websource, Data scientist is ranked #3 in best technology jobs on the global charts!"(See References)_
 
-Now the question is, Do we have data that supports this narration? If yes, how is the field doing in Australia? Are data scientists being paid well in Australia? What job titles are at the top in terms of salary? How about the distribution of opportunities among different states? Does being in Metro or Regional affects the job opportunities? What skills are the pre-requisites? 
 
 ### Before You Begin
 
@@ -99,5 +97,5 @@ see that job opportunities are very huge as per the data available for each job 
 **Note:** Although, one of the datasets is from a previous project which you can find at https://github.com/AnamKhalid09/project-one.git. Since the topic is same, you might notice similar aspects like similar content in Readme file. But, the main focus of this project is ETL. Furthermore, the data used is fresh at the time of publication, therefore trends might change in future. For that, it is recommended to use the fresh data for this project. Recommendations and pull requests are welcome!
  
 ## References:
-https://medium.datadriveninvestor.com/is-data-science-ranked-as-the-sexiest-job-for-2023-and-beyond-cf66d8ba5585
+[https://medium.datadriveninvestor.com/is-data-science-ranked-as-the-sexiest-job-for-2023-and-beyond-cf66d8ba5585](https://www.nbcsports.com/bayarea/beijing-2022-winter-olympics/which-countries-have-won-most-olympic-medals)
 
