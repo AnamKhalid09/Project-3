@@ -1,4 +1,5 @@
 import psycopg2
+from psycopg2.extras import RealDictCursor
 from flask import Flask, render_template, jsonify
 import config
 import json
@@ -11,7 +12,7 @@ def get_db_connection():
                             password= config.Password)
     return conn
 conn = get_db_connection()
-cur = conn.cursor()
+cur = conn.cursor(cursor_factory=RealDictCursor)
 cur.execute(r"""SELECT cs.country, cs.population, cs.gdp, co.summer_total, co.winter_total, co.total_participation, co.total_won
             FROM country_socioeconomic as cs
             INNER JOIN country_olympics as co
