@@ -36,5 +36,13 @@ def index():
 def vis_1():
     return render_template('vis_1.html', jsonfile = country_olympics_json)
 
+@app.route('/visualisation2', methods=['GET', 'POST'])
+def vis_2():
+    return render_template('vis_2.html', jsonfile = country_olympics_json)
+
+@app.route('/visualisation3', methods=['GET', 'POST'])
+def vis_3():
+    return render_template('vis_3.html', jsonfile = country_olympics_json)
+
 if __name__ == "__main__":
     app.run(debug=True)
