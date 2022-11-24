@@ -1,5 +1,5 @@
 import psycopg2
-from flask import Flask, render_template
+from flask import Flask, render_template, jsonify
 import config
 import json
 app = Flask(__name__)
@@ -17,6 +17,7 @@ cur.execute(r"""SELECT cs.country, cs.population, cs.gdp, co.summer_total, co.wi
             INNER JOIN country_olympics as co
             ON cs.country=co.country;""")
 country_olympics = cur.fetchall()
+
 country_olympics_json = json.dumps(country_olympics)
 # cur.close()
 # conn.close()
@@ -24,7 +25,7 @@ country_olympics_json = json.dumps(country_olympics)
 @app.route('/api')
 def API():
 
-    return render_template('api.html', jsonfile = country_olympics_json)
+    return country_olympics_json
 
 @app.route('/')
 def index():
