@@ -1,48 +1,38 @@
-# 1. import Flask
-from flask import Flask, render_template, request, url_for, redirect
-from flask_sqlalchemy import SQLAlchemy
+import psycopg2
+from flask import Flask, render_template
 import config
-
-import numpy as np
-
-from sqlalchemy.ext.automap import automap_base
-from sqlalchemy.orm import Session
-from sqlalchemy import create_engine, func
-
-from flask import Flask, jsonify
-
-# create the app
+import json
 app = Flask(__name__)
 
+def get_db_connection():
+    conn = psycopg2.connect(host='localhost',
+                            database='olympics',
+                            user= config.Username,
+                            password= config.Password)
+    return conn
+conn = get_db_connection()
+cur = conn.cursor()
+cur.execute(r"""SELECT cs.country, cs.population, cs.gdp, co.summer_total, co.winter_total, co.total_participation, co.total_won
+            FROM country_socioeconomic as cs
+            INNER JOIN country_olympics as co
+            ON cs.country=co.country;""")
+country_olympics = cur.fetchall()
+country_olympics_json = json.dumps(country_olympics)
+# cur.close()
+# conn.close()
 
-protocol = 'postgresql'
-username = config.Username
-password = config.Password
-host = 'localhost'
-port = 5432
-database_name = 'olympics'
-# configure the SQLite database, relative to the app instance folder
-engine = create_engine(f'{protocol}://{username}:{password}@{host}:{port}/{database_name}')
-# initialize the app with the extension
-Base = automap_base()
-# reflect the tables
-Base.prepare(engine, reflect=True)
+@app.route('/api')
+def API():
 
-# Save reference to the table
-Passenger = Base.classes.country
+    return render_template('api.html', jsonfile = country_olympics_json)
 
-# 2. Create an app, being sure to pass __name__
-app = Flask(__name__)
-
-
-# 3. Define what to do when a user hits the index route
 @app.route('/')
 def index():
    return render_template('index.html')
 
 @app.route('/visualisation1', methods=['GET', 'POST'])
 def vis_1():
-    return render_template('vis_1.html')
+    return render_template('vis_1.html', jsonfile = country_olympics_json)
 
-if __name__ == '__main__':
-    app.run()
+if __name__ == "__main__":
+    app.run(debug=True)
