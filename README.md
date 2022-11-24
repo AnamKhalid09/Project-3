@@ -13,12 +13,19 @@ We decided to conduct our own analysis and to test some of the measurable factor
 
 ### Getting Started
 
-1: Clone this repository using git clone 
+Clone this repository using git clone 
 
 ```
 git clone https://github.com/AnamKhalid09/Project-3.git
 
 ```
+
+Following steps have been done for story telling using data visualizations.
+- A combination of Webscraping and plotly
+- SQL database (ETL pipeline)
+- Python Flask-powered API
+- HTML/CSS
+- JS library
 
 7. Add a .gitignore file as a good practice in case you want to keep any confidential files in it like your API keys, your password or username. .gitignore file will keep all the files hidden from being published publicly even if your repository is public. For username and password, open your .gitignore file and in the first line type the following:
 
@@ -27,7 +34,9 @@ git clone https://github.com/AnamKhalid09/Project-3.git
 config.py
 ```
 
-2. Install the following libraries in your local using terminal/Gitbash. You'll use these libraries later in your code for the data analysis purpose.
+## Prerequisites
+
+Install the following libraries in your local using terminal/Gitbash. You'll use these libraries later in your code for the data analysis purpose.
 
 - Pandas 
 ```
