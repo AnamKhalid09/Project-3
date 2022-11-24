@@ -33,12 +33,30 @@ config.py
 ```
 pip install pandas
 ```
-- requests (python -m pip install requests)
-- BeautifulSoup (pip3 install beautifulsoup4)
-- os (standard library of python so no need to download it)
-- sqlalchemy (conda install -c anaconda sqlalchemy)
-- config (pip install config)
-- Flask (pip install flask)
+- requests 
+```
+python -m pip install requests
+```
+- BeautifulSoup 
+```
+pip3 install beautifulsoup4
+```
+- os 
+```
+standard library of python so no need to download it
+```
+- sqlalchemy 
+```
+conda install -c anaconda sqlalchemy
+```
+- config 
+```
+pip install config
+```
+- Flask 
+```
+pip install flask
+```
 
 **Note:** The installation instructions are for windows users only. Please check your python environment and install the libraries accordingly.
 
