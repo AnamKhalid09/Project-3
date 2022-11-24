@@ -7,7 +7,7 @@
 
 ## Background
 
-According to nbcsports, United States of America has always been on the top and have won maximum medals in the history of Olympic games. Then Russia, Germany, Great Britain and France are among the top performers in the descending order. (See Reference 1)
+According to nbc sports, United States of America has always been on the top and have won maximum medals in the history of Olympic games. Then Russia, Germany, Great Britain and France are among the top performers in the descending order. (See Reference 1)
 
 We decided to conduct our own analysis and to test some of the measurable factors contributing to the success of a countrys' performance in Olympic games. Does GDP or/and population of a country contributes to their success in the Olympic games? Let's find out!
 
