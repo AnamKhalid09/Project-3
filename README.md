@@ -7,13 +7,11 @@ What measurable factors contribute to the success of countries in the Olympic ga
 
 ## Background
 
-*"The modern Olympic Games or Olympics are the leading international sporting events featuring summer and winter sports competitions in which thousands of athletes from around the world participate in a variety of competitions. The Olympic Games are considered the world's foremost sports competition with more than 200 teams, representing sovereign states and territories, participating. The Olympic Games are normally held every four years, and since 1994, have alternated between the Summer and Winter Olympics every two years during the four-year period."* (see Reference 2)
-
 According to nbcsports, United States of America has always been on the top and have won maximum medals in the history of Olympic games. Then Russia, Germany, Great Britain and France are among the top performers in the descending order. (See Reference 1)
 
 We decided to conduct our own analysis and to test some of the measurable factors contributing to the success of a countrys' performance in Olympic games. Does GDP or/and population of a country contributes to their success in the Olympic games? Let's find out!
 
-### Before You Begin
+### Getting Started
 
 1: Clone this repository using git clone 
 
@@ -31,19 +29,18 @@ config.py
 
 2. Install the following libraries in your local using terminal/Gitbash. You'll use these libraries later in your code for the data analysis purpose.
 
-- Pandas
-- requests
-- BeautifulSoup
-- os
-- sqlalchemy
-- config
+- Pandas 
+```
+pip install pandas
+```
+- requests (python -m pip install requests)
+- BeautifulSoup (pip3 install beautifulsoup4)
+- os (standard library of python so no need to download it)
+- sqlalchemy (conda install -c anaconda sqlalchemy)
+- config (pip install config)
 - Flask (pip install flask)
 
-**Note:** The installation instructions are for windows users only. If you're using Mac, please do your research for installation on Mac.
-
-## Project Proposal
-
-The project proposal is attached in repo in the pdf form, please refer to the pdf file with name 'Project Proposal' for understanding of the project in detail.
+**Note:** The installation instructions are for windows users only. Please check your python environment and install the libraries accordingly.
 
 ## Webscraping
 
@@ -112,6 +109,4 @@ Loading includes writing the data into a relational (sql) or non-relational (mon
  
 ## References:
 1: [https://medium.datadriveninvestor.com/is-data-science-ranked-as-the-sexiest-job-for-2023-and-beyond-cf66d8ba5585](https://www.nbcsports.com/bayarea/beijing-2022-winter-olympics/which-countries-have-won-most-olympic-medals)
-
-2: https://en.wikipedia.org/wiki/Olympic_Games
 
