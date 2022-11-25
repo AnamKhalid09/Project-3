@@ -12,7 +12,7 @@
 <body>
     <nav class="navbar navbar-expand-lg bg-light">
         <div class="container-fluid">
-          <a class="navbar-brand" href="#">Navbar</a>
+          <a class="navbar-brand" href="#">Olympics</a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
@@ -22,7 +22,13 @@
                 <a class="nav-link active" aria-current="page" href="{{ url_for('index') }}">Home</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="{{ url_for('vis_1') }}">Visualisation1</a>
+                <a class="nav-link" href="{{ url_for('vis_1') }}">Participation</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="{{ url_for('vis_2') }}">GDP</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="{{ url_for('vis_3') }}">Population</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="{{ url_for('API') }}">API</a>
@@ -35,8 +41,9 @@
     <div id="plot"></div>
 
     <script src="https://d3js.org/d3.v5.min.js"></script>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
     <script 
-    src="static/testvis.js">
+    src="static/vis_1.js">
     </script>
 
 

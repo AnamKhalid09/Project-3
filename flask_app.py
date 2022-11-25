@@ -1,4 +1,5 @@
 import psycopg2
+from psycopg2.extras import RealDictCursor
 from flask import Flask, render_template, jsonify
 import config
 import json
@@ -11,7 +12,7 @@ def get_db_connection():
                             password= config.Password)
     return conn
 conn = get_db_connection()
-cur = conn.cursor()
+cur = conn.cursor(cursor_factory=RealDictCursor)
 cur.execute(r"""SELECT cs.country, cs.population, cs.gdp, co.summer_total, co.winter_total, co.total_participation, co.total_won
             FROM country_socioeconomic as cs
             INNER JOIN country_olympics as co
@@ -34,6 +35,14 @@ def index():
 @app.route('/visualisation1', methods=['GET', 'POST'])
 def vis_1():
     return render_template('vis_1.html', jsonfile = country_olympics_json)
+
+@app.route('/visualisation2', methods=['GET', 'POST'])
+def vis_2():
+    return render_template('vis_2.html', jsonfile = country_olympics_json)
+
+@app.route('/visualisation3', methods=['GET', 'POST'])
+def vis_3():
+    return render_template('vis_3.html', jsonfile = country_olympics_json)
 
 if __name__ == "__main__":
     app.run(debug=True)
