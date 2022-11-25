@@ -1,18 +1,16 @@
-CREATE TABLE new_country_socioeconomic_transformed (
+CREATE TABLE country_socioeconomic (
     country char(255),
-    population numeric(12,2),
-    GDP numeric(10,2),
+	region char(255),
+    population integer,
+    GDP integer
    CONSTRAINT "pk_country" PRIMARY KEY ("country")
  );
- CREATE TABLE new_country_olympics_transformed(
-	
+ CREATE TABLE country_olympics(
   	country char(255),
 	summer_total integer,
     winter_total integer,
-	total_participations integer,
-	
+	total_participation integer,
 	total_won integer,
-	
 	 PRIMARY KEY (country)
 );
 -- Join 2 tables
