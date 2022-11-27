@@ -2,7 +2,7 @@ CREATE TABLE country_socioeconomic (
     country char(255),
 	region char(255),
     population integer,
-    GDP integer
+    GDP integer,
    CONSTRAINT "pk_country" PRIMARY KEY ("country")
  );
  CREATE TABLE country_olympics(
