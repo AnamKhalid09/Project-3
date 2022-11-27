@@ -9,19 +9,21 @@ d3.json(url).then(function(data) {
 function displayParticipationsChart(data) {
     console.log("display participation chart");
     let barData = {
-        type: "line",
-        showlegend: false,
+        type: "bar",
+        name: "Total Participation",
+        showlegend: true,
         x: data.map(d=>d.country),
         y: data.map(d=>parseInt(d.total_participation))
     };
 
-    let lineData = {
-        type: "line",
-        showlegend: false,
+    let barData1 = {
+        type: "bar",
+        name: "Total Medals",
+        showlegend: true,
         x: data.map(d=>d.country),
         y: data.map(d=>parseInt(d.total_won))
     };
 
-    Plotly.newPlot("plot", [barData, lineData]);
+    Plotly.newPlot("plot", [barData, barData1]);
 }
 

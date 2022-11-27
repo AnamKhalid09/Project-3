@@ -9,15 +9,17 @@ d3.json(url).then(function(data) {
 function displayGdpChart(data) {
     console.log("display gdp chart");
     let barData = {
-        type: "line",
-        showlegend: false,
+        type: "bar",
+        name: "GDP",
+        showlegend: true,
         x: data.map(d=>d.country),
         y: data.map(d=>parseInt(d.gdp))
     };
 
     let lineData = {
-        type: "line",
-        showlegend: false,
+        type: "bar",
+        name: "Total Medals",
+        showlegend: true,
         x: data.map(d=>d.country),
         y: data.map(d=>parseInt(d.total_won))
     };
