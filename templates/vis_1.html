@@ -34,12 +34,19 @@
             <a class="nav-link" href="{{ url_for('API') }}">API</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="{{ url_for('high_chart_stack') }}">Total Win Break Down</a>
+            <a class="nav-link" href="{{ url_for('high_chart_stack') }}">Total Wins</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{{ url_for('scatter_plot_gdp') }}">Scatter GDP</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{{ url_for('scatter_plot_pop') }}">Scatter Populations</a>
           </li>
         </ul>
       </div>
     </div>
   </nav>
+
 
     <div id="plot"></div>
 

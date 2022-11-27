@@ -1,11 +1,11 @@
 url = 'http://127.0.0.1:5000/api';
 
 d3.json(url).then(function(data) {
-    console.log(data);
+  console.log(data);
 
-    data.sort((a, b) => a.total_won < b.total_won ? 1 : -1);
-    displayPopulationChart(data.slice(0,10));
-  });
+  data.sort((a, b) => a.total_won < b.total_won ? 1 : -1);
+  displayPopulationChart(data.slice(0,10));
+});
 
 
 function displayPopulationChart(data) {

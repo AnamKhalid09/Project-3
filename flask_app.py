@@ -43,9 +43,18 @@ def vis_2():
 @app.route('/visualisation3', methods=['GET', 'POST'])
 def vis_3():
     return render_template('vis_3.html', jsonfile = country_olympics_json)
+
 @app.route('/HighChartStacked', methods=['GET', 'POST'])
 def high_chart_stack():
     return render_template('high_chart_stack.html')
+
+@app.route('/scatterplot_gdp', methods=['GET', 'POST'])
+def scatter_plot_gdp():
+    return render_template('scatter_plot_gdp.html')
+
+@app.route('/scatterplot_pop', methods=['GET', 'POST'])
+def scatter_plot_pop():
+    return render_template('scatter_plot_pop.html')
 
 if __name__ == "__main__":
     app.run(debug=True)
