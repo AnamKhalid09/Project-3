@@ -3,7 +3,7 @@ CREATE TABLE country_socioeconomic (
 	region char(255),
     population integer,
     GDP integer,
-   CONSTRAINT "pk_country" PRIMARY KEY ("country")
+   	CONSTRAINT "pk_country" PRIMARY KEY ("country")
  );
  CREATE TABLE country_olympics(
   	country char(255),
@@ -11,7 +11,7 @@ CREATE TABLE country_socioeconomic (
     winter_total integer,
 	total_participation integer,
 	total_won integer,
-	 PRIMARY KEY (country)
+	PRIMARY KEY (country)
 );
 -- Join 2 tables
 SELECT
