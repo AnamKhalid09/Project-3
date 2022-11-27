@@ -3,10 +3,10 @@ url = 'http://127.0.0.1:5000/api';
 d3.json(url).then(function(data) {
     console.log(data);
 
-    displayPopulationChart(data);
+    chart(data);
 });
 
-function displayPopulationChart(data) {
+function chart(data) {
     console.log("display population chart");
     var trace1 = {
         x: data.map(d=>parseInt(d.gdp)),

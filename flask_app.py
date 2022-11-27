@@ -13,7 +13,7 @@ def get_db_connection():
     return conn
 conn = get_db_connection()
 cur = conn.cursor(cursor_factory=RealDictCursor)
-cur.execute(r"""SELECT cs.country, cs.population, cs.gdp, co.summer_total, co.winter_total, co.total_participation, co.total_won
+cur.execute(r"""SELECT cs.country, cs.region, cs.population, cs.gdp, co.summer_total, co.winter_total, co.total_participation, co.total_won
             FROM country_socioeconomic as cs
             INNER JOIN country_olympics as co
             ON cs.country=co.country;""")
@@ -55,6 +55,18 @@ def scatter_plot_gdp():
 @app.route('/scatterplot_pop', methods=['GET', 'POST'])
 def scatter_plot_pop():
     return render_template('scatter_plot_pop.html')
+
+@app.route('/pie_region_wins', methods=['GET', 'POST'])
+def pie_region_wins():
+    return render_template('pie_region_wins.html')
+
+@app.route('/pie_region_gdp', methods=['GET', 'POST'])
+def pie_region_gdp():
+    return render_template('pie_region_gdp.html')
+
+@app.route('/pie_region_population', methods=['GET', 'POST'])
+def pie_region_population():
+    return render_template('pie_region_population.html')
 
 if __name__ == "__main__":
     app.run(debug=True)
