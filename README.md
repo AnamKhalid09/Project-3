@@ -50,6 +50,10 @@ pip install config
 ```
 pip install flask
 ```
+- psycopg2
+```
+pip install psycopg2
+```
 
 **Note:** The installation instructions are for windows users only. Please check your python environment and install the libraries accordingly.
 
@@ -147,7 +151,11 @@ config.py
 
 ## Webscraping
 
-Follow the steps below to get the scraped data
+The Olympics data is web scraped from [wikipedia](https://en.wikipedia.org/wiki/All-time_Olympic_Games_medal_table) on the 27/11/2022. To perform the web scrape process yourself simply run all cells within the webscrape.ipynb file, ensuring all dependencies are installed (pandas
+, requests, bs4). 
+Initially webscrape.ipynb will when check the [wikipedia](https://en.wikipedia.org/wiki/All-time_Olympic_Games_medal_table) link and receive a response from the webpage. When the response has been filled bs4 is used to then to load the table from [wikipedia](https://en.wikipedia.org/wiki/All-time_Olympic_Games_medal_table) then it will parse this object to pandas allowing it to be cleaned before outputting the olympics_medals_country_wise.csv file. The cleaning that is performed is the removal of the unnecessary columns for this project, removing the original 2 headers and replacing them with a simplified header and removing the country codes from the ‘country’ column so it can be paired to the country_profile_variables.csv. 
+
+Or in short:
 
 - Import pandas, requests, BeautifulSoup and os libraries
 - Get the response in the form of html
@@ -156,6 +164,32 @@ Follow the steps below to get the scraped data
 - Create a copy of the dataframe, to save yourself from troubles later on, and rename the columns.
 - Clean the data
 - Save the data in the form of csv files into Resources folder so that later on you can use this data for the ETL pipeline.
+
+## Flask and web aplications
+
+To load the visualisations and web portion of this project run the flask_app.py, ensuring you have the dependencies (psycopg2, flask, json) and have set up a local SQL database (this is done by running: queries.sql and data_etl.ipynb). The flask_app.py creates a locally hosted web directory on your machine, simply loading the local ip will bring you to the home page (index.html). From there you can follow the ‘nav-bar’ at the top of the web page to direct to each page within the locally hosted site. When flask_app.py is first loaded it will use the psycopg2 library to connect to the SQL database and pull the data from it. It then performs a json dump which is then output in the ‘/api’ directory which is called by other visualisations within the dataset. The directories within the flask server are as follows:
+- ’/’ Which load the index.html and is the ‘home page’ for the flask server.
+ 
+- ’/api’ Which loads the json file and is called when building the web visualisations.
+ 
+- ’/visualisation1’ which loads vis_1.html that runs vis_1.js. Which creates an interactive plotly chart that allows the user to zoom in and displays the Total wins vs Participation. That shows the relation between participation and total wins.
+ 
+- ’/visualisation2’ which loads vis_2.html that runs vis_2.js. Which creates an interactive plotly chart that allows the user to zoom in and displays the Total wins vs GDP. That shows the relation between gdp and total wins.
+ 
+- ’/visualisation3’ which loads vis_3.html that runs vis_3.js. Which creates an interactive plotly chart that allows the user to zoom in and displays the Total wins vs Population. That shows the relation between population and total wins.
+ 
+- ’/HighChartStacked’ which loads high_chart_stack.html that runs high_chart_stack.js. Which creates a highcharts stacked bar chart that provides a visualisation of each the breakdown of each countries total wins in both summer and winter olympic games.
+ 
+- ’/scatterplot_gdp’ which loads scatter_plot_gdp.html that runs scatter_plot_gdp.js. Which creates an interactive plotly scatter plot that allows the user to zoom in and displays the relationship between gdp and total medals.
+ 
+ 
+- ’/scatterplot_pop’ which loads scatter_plot_gdp.html that runs scatter_plot_gdp.js. Which creates an interactive plotly scatter plot that allows the user to zoom in and displays the relationship between population and total medals.
+ 
+- ’/pie_region_wins’ which loads pie_region_wins.html that runs pie_region_wins.js. Which creates an interactive plotly pie chart that allows the user to select which regions are displayed within the pie chart showing the percentage of each United Nations defined region’s total wins.
+ 
+- ’/pie_region_gdp’ which loads pie_region_gdp.html that runs pie_region_gdp.js. Which creates an interactive plotly pie chart that allows the user to select which regions are displayed within the pie chart showing the percentage of each United Nations defined region’s GDP.
+ 
+- ’/pie_region_population’ which loads pie_region_population.html that runs pie_region_population.js. Which creates an interactive plotly pie chart that allows the user to select which regions are displayed within the pie chart showing the percentage of each United Nations defined region’s populaiton.
 
 
 ## Findings
