@@ -22,6 +22,6 @@ SELECT
 FROM
 	new_country_socioeconomic_transformed as cp
 INNER JOIN
-	 mc new_country_olympics_transformed
+	 mc as new_country_olympics_transformed
 ON
 	cp.country = mc.country;
