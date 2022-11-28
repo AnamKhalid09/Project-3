@@ -17,6 +17,7 @@ function chart(data) {
       }];
        
       var layout = {
+        title: 'Regions GDP Break Down',
         height: 800,
         width: 2000
       };

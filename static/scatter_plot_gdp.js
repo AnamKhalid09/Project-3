@@ -19,7 +19,7 @@ function chart(data) {
       };
       var layout = {
         title: {
-          text:'Population and Total Medals',
+          text:'GDP and Total Medals',
           font: {
             size: 24
           },

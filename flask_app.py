@@ -80,5 +80,13 @@ def total_gdp():
 def total_pop():
     return render_template('total_pop.html')
 
+@app.route('/total_medals', methods=['GET', 'POST'])
+def total_medals():
+    return render_template('total_medals.html')
+
+@app.route('/top_medals', methods=['GET', 'POST'])
+def top_medals():
+    return render_template('top_medals.html')
+
 if __name__ == "__main__":
     app.run(debug=True)
