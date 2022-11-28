@@ -10,51 +10,60 @@
   
 </head>
 <body>
-  <nav class="navbar navbar-expand-lg bg-light">
-    <div class="container-fluid">
-      <a class="navbar-brand" href="#">Olympics</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav">
-            <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="{{ url_for('index') }}">Home</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="{{ url_for('vis_1') }}">Participation</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="{{ url_for('vis_2') }}">GDP</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="{{ url_for('vis_3') }}">Population</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="{{ url_for('high_chart_stack') }}">Total Wins</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="{{ url_for('scatter_plot_gdp') }}">Scatter GDP</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="{{ url_for('scatter_plot_pop') }}">Scatter Populations</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="{{ url_for('pie_region_wins') }}">Pie Regional Medals</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="{{ url_for('pie_region_gdp') }}">Pie Regional GDP</a>
-            </li>
-            <li class="nav-item">
-            <a class="nav-link" href="{{ url_for('pie_region_population') }}">Pie Regional Populations</a>
-            </li>
-            <li class="nav-item">
-            <a class="nav-link" href="{{ url_for('API') }}">API</a>
-            </li>
-        </ul>
-      </div>
-    </div>
-  </nav>
+    <nav class="navbar navbar-expand-lg bg-light">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">Olympics</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="{{ url_for('index') }}">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ url_for('vis_1') }}">Ranked Participation</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ url_for('total_gdp') }}">Ranked GDP</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="{{ url_for('total_pop') }}">Ranked Population</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ url_for('total_participation_10') }}">Participation Top 10</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ url_for('vis_2') }}">GDP Top 10</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ url_for('vis_3') }}">Population Top 10</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ url_for('high_chart_stack') }}">Total Wins</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ url_for('scatter_plot_gdp') }}">Scatter GDP</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ url_for('scatter_plot_pop') }}">Scatter Populations</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ url_for('pie_region_wins') }}">Pie Regional Medals</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ url_for('pie_region_gdp') }}">Pie Regional GDP</a>
+                </li>
+                <li class="nav-item">
+                <a class="nav-link" href="{{ url_for('pie_region_population') }}">Pie Regional Populations</a>
+                </li>
+                <li class="nav-item">
+                <a class="nav-link" href="{{ url_for('API') }}">API</a>
+                </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
 
     <div id="plot"></div>
 

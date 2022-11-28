@@ -22,13 +22,22 @@
                     <a class="nav-link active" aria-current="page" href="{{ url_for('index') }}">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="{{ url_for('vis_1') }}">Participation</a>
+                    <a class="nav-link" href="{{ url_for('vis_1') }}">Ranked Participation</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="{{ url_for('vis_2') }}">GDP</a>
+                    <a class="nav-link" href="{{ url_for('total_gdp') }}">Ranked GDP</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="{{ url_for('vis_3') }}">Population</a>
+                  <a class="nav-link" href="{{ url_for('total_pop') }}">Ranked Population</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ url_for('total_participation_10') }}">Participation Top 10</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ url_for('vis_2') }}">GDP Top 10</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ url_for('vis_3') }}">Population Top 10</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="{{ url_for('high_chart_stack') }}">Total Wins</a>

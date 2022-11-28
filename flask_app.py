@@ -68,5 +68,17 @@ def pie_region_gdp():
 def pie_region_population():
     return render_template('pie_region_population.html')
 
+@app.route('/total_participation_10', methods=['GET', 'POST'])
+def total_participation_10():
+    return render_template('total_participation_10.html')
+
+@app.route('/total_gdp', methods=['GET', 'POST'])
+def total_gdp():
+    return render_template('total_gdp.html')
+
+@app.route('/total_pop', methods=['GET', 'POST'])
+def total_pop():
+    return render_template('total_pop.html')
+
 if __name__ == "__main__":
     app.run(debug=True)

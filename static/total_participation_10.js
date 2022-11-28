@@ -4,7 +4,7 @@ d3.json(url).then(function(data) {
     console.log(data);
 
     data.sort((a, b) => a.total_participation < b.total_participation ? 1 : -1);
-    displayParticipationsChart(data);
+    displayParticipationsChart(data.slice(0,10));
   });
 
 function displayParticipationsChart(data) {
@@ -25,7 +25,7 @@ function displayParticipationsChart(data) {
     };
 
     let layout = {
-        title: 'Ranked Total Won & Participation',
+        title: 'Top 10 Total Won & Participation',
         yaxis: {title: 'Total Won'},
 
         yaxis2: {
@@ -39,4 +39,3 @@ function displayParticipationsChart(data) {
 
     Plotly.newPlot("plot", [barData, lineData], layout);
 }
-

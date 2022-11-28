@@ -3,12 +3,12 @@ url = 'http://127.0.0.1:5000/api';
 d3.json(url).then(function(data) {
     console.log(data);
 
-    data.sort((a, b) => a.total_participation < b.total_participation ? 1 : -1);
-    displayParticipationsChart(data);
+    data.sort((a, b) => a.gdp < b.gdp ? 1 : -1);
+    displayGdpChart(data);
   });
 
-function displayParticipationsChart(data) {
-    console.log("display participation chart");
+function displayGdpChart(data) {
+    console.log("display gdp chart");
     let barData = {
         name: "Total Won",
         type: "bar",
@@ -17,26 +17,22 @@ function displayParticipationsChart(data) {
     };
 
     let lineData = {
-        name: "Participation",
+        name: "GDP",
         type: "bar",
-        yaxis: 'y2',
         x: data.map(d=>d.country),
-        y: data.map(d=>parseInt(d.total_participation))
+        y: data.map(d=>parseInt(d.gdp))
     };
 
     let layout = {
-        title: 'Ranked Total Won & Participation',
+        title: 'Ranked GDP Total Won & GDP',
+        barmode: 'group',
         yaxis: {title: 'Total Won'},
-
         yaxis2: {
-          title: 'Participation',
+          title: 'GDP',
           titlefont: {color: 'rgb(148, 103, 189)'},
           tickfont: {color: 'rgb(148, 103, 189)'},
-          overlaying: 'y',
-          side: 'right'
         }
       };
-
+      
     Plotly.newPlot("plot", [barData, lineData], layout);
 }
-
