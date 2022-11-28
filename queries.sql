@@ -5,6 +5,8 @@ CREATE TABLE country_socioeconomic (
     GDP integer,
    	CONSTRAINT "pk_country" PRIMARY KEY ("country")
  );
+ 
+ Select * from country_socioeconomic;
  CREATE TABLE country_olympics(
   	country char(255),
 	summer_total integer,
@@ -15,13 +17,18 @@ CREATE TABLE country_socioeconomic (
 );
 -- Join 2 tables
 SELECT
-	cp.country,
-	cp.population,
-	cp.GDP
+	cs.country,
+	cs.population,
+	cs.GDP,
+	cs.region
 	
 FROM
-	new_country_socioeconomic_transformed as cp
+	country_socioeconomic as cs
 INNER JOIN
+<<<<<<< HEAD
 	 mc as new_country_olympics_transformed
+=======
+	 country_olympics as co
+>>>>>>> c6da892e9ab65f29e7d1211a4beba4efb3fea9ec
 ON
-	cp.country = mc.country;
+	cs.country = co.country;
