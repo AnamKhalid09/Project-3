@@ -168,6 +168,7 @@ Or in short:
 ## Flask and web aplications
 
 To load the visualisations and web portion of this project run the flask_app.py, ensuring you have the dependencies (psycopg2, flask, json) and have set up a local SQL database (this is done by running: queries.sql and data_etl.ipynb). The flask_app.py creates a locally hosted web directory on your machine, simply loading the local ip will bring you to the home page (index.html). From there you can follow the ‘nav-bar’ at the top of the web page to direct to each page within the locally hosted site. When flask_app.py is first loaded it will use the psycopg2 library to connect to the SQL database and pull the data from it. It then performs a json dump which is then output in the ‘/api’ directory which is called by other visualisations within the dataset. The directories within the flask server are as follows:
+
 - ’/’ Which load the index.html and is the ‘home page’ for the flask server.
  
 - ’/api’ Which loads the json file and is called when building the web visualisations.
