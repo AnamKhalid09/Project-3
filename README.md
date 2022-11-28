@@ -63,7 +63,7 @@ pip install psycopg2
 - A combination of Webscraping and plotly
 - Python Flask-powered API
 - HTML/CSS
-- JS library
+- JS library (High Chart)
 
 
 ## Extracting, Transforming and Loading process (ETL)
