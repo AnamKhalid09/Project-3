@@ -197,5 +197,5 @@ To load the visualisations and web portion of this project run the flask_app.py,
 
  
 ## References:
-1:(https://www.nbcsports.com/bayarea/beijing-2022-winter-olympics/which-countries-have-won-most-olympic-medals)
+1: https://www.nbcsports.com/bayarea/beijing-2022-winter-olympics/which-countries-have-won-most-olympic-medals
 
